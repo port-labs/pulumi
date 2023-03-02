@@ -3,12 +3,11 @@ module port-go
 go 1.20
 
 require (
-github.com/pulumi/pulumi/sdk/v3 v3.55.0
-github.com/dirien/pulumi-port-labs v0.0.0
+	github.com/dirien/pulumi-port-labs v0.8.3
+	github.com/pulumi/pulumi/sdk/v3 v3.55.0
 )
-replace (
-	github.com/dirien/pulumi-port-labs => ../../sdk
-)
+
+replace github.com/dirien/pulumi-port-labs => ../../sdk
 
 require (
 	github.com/Microsoft/go-winio v0.5.2 // indirect
