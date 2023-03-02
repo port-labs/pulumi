@@ -1,5 +1,6 @@
 # Port Resource Provider
 
+![Port](./img/port.svg)
 
 The Port Resource Provider lets you manage [Port](https://www.getport.io) resources.
 
@@ -25,7 +26,7 @@ yarn add @ediri/port
 ### Python
 
 To use from Python, install using `pip`:
-``
+
 ```bash
 pip install ediri-port
 ```
