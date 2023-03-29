@@ -123,7 +123,7 @@ jobs:
           dotnet nuget push ${{github.workspace}}/sdk/dotnet/bin/Debug/*.nupkg -s ${{ env.NUGET_FEED_URL }} -k ${{ env.NUGET_PUBLISH_KEY }}
           echo "done publishing packages"
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         dotnetversion:
           - 3.1.301
@@ -132,7 +132,7 @@ jobs:
         language:
           - nodejs
           - python
-          - dotnet
+          # - dotnet
           - go
         nodeversion:
           - 16.x

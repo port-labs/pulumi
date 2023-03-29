@@ -1,4 +1,4 @@
-module github.com/dirien/pulumi-port-labs/provider
+module github.com/port-labs/pulumi-port/provider
 
 go 1.20
 

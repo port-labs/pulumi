@@ -1,5 +1,5 @@
 {
-    "name": "@ediri/port",
+    "name": "@port-labs/port-pulumi",
     "version": "${VERSION}",
     "description": "A Pulumi package for creating and managing Port resources.",
     "keywords": [
@@ -8,7 +8,7 @@
         "category/utility"
     ],
     "homepage": "https://www.pulumi.com",
-    "repository": "https://github.com/dirien/pulumi-port-labs",
+    "repository": "https://github.com/port-labs/pulumi-port-labs",
     "license": "Apache-2.0",
     "scripts": {
         "build": "tsc",
@@ -25,6 +25,6 @@
     "pulumi": {
         "resource": true,
         "name": "port",
-        "server": "github://api.github.com/dirien/pulumi-port-labs"
+        "server": "github://api.github.com/port-labs/pulumi-port"
     }
 }

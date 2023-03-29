@@ -15,7 +15,7 @@ class InstallPluginCommand(install):
     def run(self):
         install.run(self)
         try:
-            check_call(['pulumi', 'plugin', 'install', 'resource', 'port', PLUGIN_VERSION, '--server', 'github://api.github.com/dirien/pulumi-port-labs'])
+            check_call(['pulumi', 'plugin', 'install', 'resource', 'port', PLUGIN_VERSION, '--server', 'github://api.github.com/port-labs/pulumi-port'])
         except OSError as error:
             if error.errno == errno.ENOENT:
                 print(f"""
@@ -37,7 +37,7 @@ def readme():
         return "port Pulumi Package - Development Version"
 
 
-setup(name='ediri_port',
+setup(name='port-labs_port-pulumi',
       version=VERSION,
       description="A Pulumi package for creating and managing Port resources.",
       long_description=readme(),
@@ -48,12 +48,12 @@ setup(name='ediri_port',
       keywords='pulumi port category/utility',
       url='https://www.pulumi.com',
       project_urls={
-          'Repository': 'https://github.com/dirien/pulumi-port-labs'
+          'Repository': 'https://github.com/port-labs/pulumi-port-labs'
       },
       license='Apache-2.0',
       packages=find_packages(),
       package_data={
-          'ediri_port': [
+          'port-labs_port-pulumi': [
               'py.typed',
               'pulumi-plugin.json',
           ]

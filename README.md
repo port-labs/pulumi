@@ -36,7 +36,7 @@ pip install ediri-port
 To use from Go, use `go get` to grab the latest version of the library:
 
 ```bash
-go get github.com/dirien/pulumi-port/sdk
+go get github.com/port-labs/pulumi-port/sdk
 ```
 
 ### .NET

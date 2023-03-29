@@ -1,3 +1,3 @@
-module github.com/dirien/pulumi-vultr/examples/v2
+module github.com/port-labs/pulumi-port/examples/v2
 
 go 1.20

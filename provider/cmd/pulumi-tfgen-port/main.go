@@ -15,8 +15,8 @@
 package main
 
 import (
-	port "github.com/dirien/pulumi-port-labs/provider"
-	"github.com/dirien/pulumi-port-labs/provider/pkg/version"
+	port "github.com/port-labs/pulumi-port/provider"
+	"github.com/port-labs/pulumi-port/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
 )
 

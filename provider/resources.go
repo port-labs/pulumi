@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package vultr
+package port
 
 import (
 	"fmt"
-	"github.com/dirien/pulumi-port-labs/provider/pkg/version"
+	"github.com/port-labs/pulumi-port/provider/pkg/version"
 	"github.com/port-labs/terraform-provider-port-labs/port"
 	"path/filepath"
 
@@ -54,12 +54,12 @@ func Provider() tfbridge.ProviderInfo {
 		Name: "port",
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
-		DisplayName: "Port",
+		DisplayName: "Port Pulumi",
 		// The default publisher for all packages is Pulumi.
 		// Change this to your personal name (or a company name) that you
 		// would like to be shown in the Pulumi Registry if this package is published
 		// there.
-		Publisher: "dirien",
+		Publisher: "port-labs",
 		// LogoURL is optional but useful to help identify your package in the Pulumi Registry
 		// if this package is published there.
 		//
@@ -69,7 +69,7 @@ func Provider() tfbridge.ProviderInfo {
 		// PluginDownloadURL is an optional URL used to download the Provider
 		// for use in Pulumi programs
 		// e.g https://github.com/org/pulumi-provider-name/releases/
-		PluginDownloadURL: "github://api.github.com/dirien/pulumi-port-labs",
+		PluginDownloadURL: "github://api.github.com/port-labs/pulumi-port",
 		Description:       "A Pulumi package for creating and managing Port resources.",
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
@@ -77,7 +77,7 @@ func Provider() tfbridge.ProviderInfo {
 		Keywords:   []string{"pulumi", "port", "category/utility"},
 		License:    "Apache-2.0",
 		Homepage:   "https://www.pulumi.com",
-		Repository: "https://github.com/dirien/pulumi-port-labs",
+		Repository: "https://github.com/port-labs/pulumi-port-labs",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
 		GitHubOrg: "port-labs",
@@ -109,8 +109,14 @@ func Provider() tfbridge.ProviderInfo {
 			"port-labs_blueprint": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "Blueprint")},
 			"port-labs_entity":    {Tok: tfbridge.MakeResource(mainPkg, mainMod, "Entity")},
 		},
+		DataSources: map[string]*tfbridge.DataSourceInfo{
+			// Map each resource in the Terraform provider to a Pulumi function. An example
+			// is below.
+			// "aws_ami": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getAmi")},
+		  
+		},
 		JavaScript: &tfbridge.JavaScriptInfo{
-			PackageName: "@ediri/port",
+			PackageName: "@port-labs/port-pulumi",
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
@@ -125,7 +131,7 @@ func Provider() tfbridge.ProviderInfo {
 			//Overlay: &tfbridge.OverlayInfo{},
 		},
 		Python: &tfbridge.PythonInfo{
-			PackageName: "ediri_port",
+			PackageName: "port-labs_port-pulumi",
 			// List any Python dependencies and their version ranges
 			Requires: map[string]string{
 				"pulumi": ">=3.0.0,<4.0.0",
@@ -133,7 +139,7 @@ func Provider() tfbridge.ProviderInfo {
 		},
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
-				fmt.Sprintf("github.com/dirien/pulumi-%[1]s-labs/sdk/", mainPkg),
+				fmt.Sprintf("github.com/port-labs/pulumi-%[1]s/sdk/", mainPkg),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
 				mainPkg,
@@ -141,13 +147,10 @@ func Provider() tfbridge.ProviderInfo {
 			GenerateResourceContainerTypes: true,
 		},
 		CSharp: &tfbridge.CSharpInfo{
-			RootNamespace: "ediri",
+			RootNamespace: "port_labs",
 			PackageReferences: map[string]string{
 				"Pulumi": "3.*",
 			},
-		},
-		Java: &tfbridge.JavaInfo{
-			BasePackage: "io.dirien",
 		},
 	}
 

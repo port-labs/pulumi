@@ -1,6 +1,6 @@
 {
     "name": "port",
-    "displayName": "Port",
+    "displayName": "Port Pulumi",
     "description": "A Pulumi package for creating and managing Port resources.",
     "keywords": [
         "pulumi",
@@ -10,9 +10,9 @@
     "homepage": "https://www.pulumi.com",
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`port` Terraform Provider](https://github.com/port-labs/terraform-provider-port).",
-    "repository": "https://github.com/dirien/pulumi-port-labs",
-    "pluginDownloadURL": "github://api.github.com/dirien/pulumi-port-labs",
-    "publisher": "dirien",
+    "repository": "https://github.com/port-labs/pulumi-port-labs",
+    "pluginDownloadURL": "github://api.github.com/port-labs/pulumi-port",
+    "publisher": "port-labs",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"
     },
@@ -23,15 +23,12 @@
             "packageReferences": {
                 "Pulumi": "3.*"
             },
-            "rootNamespace": "ediri"
+            "rootNamespace": "port_labs"
         },
         "go": {
             "generateExtraInputTypes": true,
             "generateResourceContainerTypes": true,
-            "importBasePath": "github.com/dirien/pulumi-port-labs/sdk/go/port"
-        },
-        "java": {
-            "basePackage": "io.dirien"
+            "importBasePath": "github.com/port-labs/pulumi-port/sdk/go/port"
         },
         "nodejs": {
             "compatibility": "tfbridge20",
@@ -44,14 +41,14 @@
             },
             "disableUnionOutputTypes": true,
             "packageDescription": "A Pulumi package for creating and managing Port resources.",
-            "packageName": "@ediri/port",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/port-labs/terraform-provider-port)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-port` repo](https://github.com/dirien/pulumi-port-labs/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-port` repo](https://github.com/port-labs/terraform-provider-port/issues).",
+            "packageName": "@port-labs/port-pulumi",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/port-labs/terraform-provider-port)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-port` repo](https://github.com/port-labs/pulumi-port-labs/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-port` repo](https://github.com/port-labs/terraform-provider-port/issues).",
             "typescriptVersion": ""
         },
         "python": {
             "compatibility": "tfbridge20",
-            "packageName": "ediri_port",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/port-labs/terraform-provider-port)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-port` repo](https://github.com/dirien/pulumi-port-labs/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-port` repo](https://github.com/port-labs/terraform-provider-port/issues).",
+            "packageName": "port-labs_port-pulumi",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/port-labs/terraform-provider-port)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-port` repo](https://github.com/port-labs/pulumi-port-labs/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-port` repo](https://github.com/port-labs/terraform-provider-port/issues).",
             "requires": {
                 "pulumi": "\u003e=3.0.0,\u003c4.0.0"
             }

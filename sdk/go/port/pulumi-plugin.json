@@ -1,5 +1,5 @@
 {
   "resource": true,
   "name": "port",
-  "server": "github://api.github.com/dirien/pulumi-port-labs"
+  "server": "github://api.github.com/port-labs/pulumi-port"
 }

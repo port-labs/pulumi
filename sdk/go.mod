@@ -1,10 +1,10 @@
-module github.com/dirien/pulumi-port-labs/sdk
+module github.com/port-labs/pulumi-port/sdk
 
 go 1.20
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/pulumi/pulumi/sdk/v3 v3.59.1
+	github.com/pulumi/pulumi/sdk/v3 v3.60.0
 )
 
 require (

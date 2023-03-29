@@ -50,7 +50,7 @@ export function getVersion(): string {
 
 /** @internal */
 export function resourceOptsDefaults(): any {
-    return { version: getVersion(), pluginDownloadURL: "github://api.github.com/dirien/pulumi-port-labs" };
+    return { version: getVersion(), pluginDownloadURL: "github://api.github.com/port-labs/pulumi-port" };
 }
 
 /** @internal */
