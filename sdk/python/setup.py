@@ -11,13 +11,11 @@ from subprocess import check_call
 VERSION = "0.0.0"
 PLUGIN_VERSION = "0.0.0"
 
-
 class InstallPluginCommand(install):
     def run(self):
         install.run(self)
         try:
-            check_call(['pulumi', 'plugin', 'install', 'resource', 'port',
-                       PLUGIN_VERSION, '--server', 'github://api.github.com/port-labs/pulumi'])
+            check_call(['pulumi', 'plugin', 'install', 'resource', 'port', PLUGIN_VERSION, '--server', 'github://api.github.com/port-labs/pulumi'])
         except OSError as error:
             if error.errno == errno.ENOENT:
                 print(f"""
@@ -39,7 +37,7 @@ def readme():
         return "port Pulumi Package - Development Version"
 
 
-setup(name='port-labs_port-pulumi',
+setup(name='port_pulumi',
       version=VERSION,
       description="A Pulumi package for creating and managing Port resources.",
       long_description=readme(),
@@ -50,12 +48,12 @@ setup(name='port-labs_port-pulumi',
       keywords='pulumi port category/utility',
       url='https://www.pulumi.com',
       project_urls={
-          'Repository': 'https://github.com/port-labs/pulumi-labs'
+          'Repository': 'https://github.com/port-labs/pulumi'
       },
       license='Apache-2.0',
       packages=find_packages(),
       package_data={
-          'port-labs_port-pulumi': [
+          'port_pulumi': [
               'py.typed',
               'pulumi-plugin.json',
           ]

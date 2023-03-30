@@ -14,10 +14,10 @@ from . import outputs
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
-    import port-labs_port-pulumi.config as __config
+    import port_pulumi.config as __config
     config = __config
 else:
-    config = _utilities.lazy_import('port-labs_port-pulumi.config')
+    config = _utilities.lazy_import('port_pulumi.config')
 
 _utilities.register(
     resource_modules="""
@@ -25,7 +25,7 @@ _utilities.register(
  {
   "pkg": "port",
   "mod": "index/action",
-  "fqn": "port-labs_port-pulumi",
+  "fqn": "port_pulumi",
   "classes": {
    "port:index/action:Action": "Action"
   }
@@ -33,7 +33,7 @@ _utilities.register(
  {
   "pkg": "port",
   "mod": "index/blueprint",
-  "fqn": "port-labs_port-pulumi",
+  "fqn": "port_pulumi",
   "classes": {
    "port:index/blueprint:Blueprint": "Blueprint"
   }
@@ -41,7 +41,7 @@ _utilities.register(
  {
   "pkg": "port",
   "mod": "index/entity",
-  "fqn": "port-labs_port-pulumi",
+  "fqn": "port_pulumi",
   "classes": {
    "port:index/entity:Entity": "Entity"
   }
@@ -53,7 +53,7 @@ _utilities.register(
  {
   "pkg": "port",
   "token": "pulumi:providers:port",
-  "fqn": "port-labs_port-pulumi",
+  "fqn": "port_pulumi",
   "class": "Provider"
  }
 ]
