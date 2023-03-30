@@ -1,14 +1,15 @@
 "use strict";
 const pulumi = require("@pulumi/pulumi");
-const port = require("@ediri/port");
+const port = require("@port-labs/pulumi");
 
 const entity = new port.Entity("entity", {
+    identifier: "monolith",
     title: "monolith",
-    blueprint: "microservice_blueprint",
+    blueprint: "microservice",
     properties: [
         {
-            name: "microservice_name",
-            value: "golang_monolith",
+            name: "language",
+            value: "Node",
         }
     ]
 });

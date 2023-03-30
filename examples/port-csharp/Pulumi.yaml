@@ -1,3 +1,0 @@
-name: port-csharp
-runtime: dotnet
-description: A minimal C# Pulumi program

@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "@pulumi/pulumi": "3.55.0",
-    "@ediri/port": "0.8.3"
+    "@port-labs/pulumi": "latest"
   }
 }

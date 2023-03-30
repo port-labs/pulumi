@@ -85,10 +85,6 @@ jobs:
         with:
           node-version: ${{matrix.nodeversion}}
           registry-url: ${{env.NPM_REGISTRY_URL}}
-      - name: Setup DotNet
-        uses: actions/setup-dotnet@607fce577a46308457984d59e4954e075820f10a # tag=v2.1.0
-        with:
-          dotnet-version: ${{matrix.dotnetverson}}
       - name: Setup Python
         uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435 # tag=v4.2.0
         with:
@@ -117,24 +113,16 @@ jobs:
           access: "public"
           token: ${{ env.NPM_TOKEN }}
           package: ${{github.workspace}}/sdk/nodejs/bin/package.json
-      - if: ${{ matrix.language == 'dotnet' && env.PUBLISH_NUGET == 'true' }}
-        name: publish nuget package
-        run: |
-          dotnet nuget push ${{github.workspace}}/sdk/dotnet/bin/Debug/*.nupkg -s ${{ env.NUGET_FEED_URL }} -k ${{ env.NUGET_PUBLISH_KEY }}
-          echo "done publishing packages"
     strategy:
       fail-fast: false
       matrix:
-        dotnetversion:
-          - 3.1.301
-        goversion:
-          - '1.20'
         language:
           - nodejs
           - python
-          # - dotnet
-          # - go
+          - go
         nodeversion:
           - 16.x
         pythonversion:
           - "3.9"
+        goversion:
+          - '1.20'

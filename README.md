@@ -47,7 +47,4 @@ The following configuration points are available for the `port` provider:
 - `port:clientId` (environment: `PORT_CLIENT_ID`) - This is the Port client ID.
 - `port:secret` (environment: `PORT_CLIENT_SECRET`) - This is the Port secret.
 - `port:token` - This is the Port token.
-## Reference
-
-For detailed reference documentation, please visit [the Pulumi registry](https://www.pulumi.com/registry/packages/pulumi-port-labs/api-docs/).
 

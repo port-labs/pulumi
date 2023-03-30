@@ -1,13 +1,14 @@
 import * as pulumi from "@pulumi/pulumi";
-import * as port from "@ediri/port";
+import * as port from "@port-labs/pulumi";
 
-const entity = new port.Entity("entity", {
+const entity = new port.Entity("monolith", {
+    identifier: "monolith",
     title: "monolith",
-    blueprint: "microservice_blueprint",
+    blueprint: "microservice",
     properties: [
         {
-            name: "microservice_name",
-            value: "golang_monolith",
+            name: "language",
+            value: "Node",
         }
     ]
 });
