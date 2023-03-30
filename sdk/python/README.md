@@ -36,7 +36,7 @@ pip install port_labs_port_pulumi
 To use from Go, use `go get` to grab the latest version of the library:
 
 ```bash
-go get github.com/port-labs/pulumi-port/sdk
+go get github.com/port-labs/pulumi/sdk
 ```
 
 ### .NET

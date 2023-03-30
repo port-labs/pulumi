@@ -98,17 +98,20 @@ _version_str = str(_version)
 def get_version():
     return _version_str
 
+
 def get_resource_opts_defaults() -> pulumi.ResourceOptions:
     return pulumi.ResourceOptions(
         version=get_version(),
         plugin_download_url=get_plugin_download_url(),
     )
 
+
 def get_invoke_opts_defaults() -> pulumi.InvokeOptions:
     return pulumi.InvokeOptions(
         version=get_version(),
         plugin_download_url=get_plugin_download_url(),
     )
+
 
 def get_resource_args_opts(resource_args_type, resource_options_type, *args, **kwargs):
     """
@@ -188,7 +191,8 @@ class Package(pulumi.runtime.ResourcePackage):
     def construct_provider(self, name: str, typ: str, urn: str) -> pulumi.ProviderResource:
         if typ != self.pkg_info['token']:
             raise Exception(f"unknown provider type {typ}")
-        Provider = getattr(lazy_import(self.pkg_info['fqn']), self.pkg_info['class'])
+        Provider = getattr(lazy_import(
+            self.pkg_info['fqn']), self.pkg_info['class'])
         return Provider(name, pulumi.ResourceOptions(urn=urn))
 
 
@@ -215,7 +219,8 @@ def register(resource_modules, resource_packages):
     resource_packages = json.loads(resource_packages)
 
     for pkg_info in resource_packages:
-        pulumi.runtime.register_resource_package(pkg_info['pkg'], Package(pkg_info))
+        pulumi.runtime.register_resource_package(
+            pkg_info['pkg'], Package(pkg_info))
 
     for mod_info in resource_modules:
         pulumi.runtime.register_resource_module(
@@ -246,5 +251,6 @@ def lift_output_func(func: typing.Any) -> typing.Callable[[_F], _F]:
 
     return (lambda _: lifted_func)
 
+
 def get_plugin_download_url():
-	return "github://api.github.com/port-labs/pulumi-port"
+    return "github://api.github.com/port-labs/pulumi"

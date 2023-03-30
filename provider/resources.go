@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/port-labs/pulumi-port/provider/pkg/version"
+	"github.com/port-labs/pulumi/provider/pkg/version"
 	"github.com/port-labs/terraform-provider-port-labs/port"
 
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
@@ -70,7 +70,7 @@ func Provider() tfbridge.ProviderInfo {
 		// PluginDownloadURL is an optional URL used to download the Provider
 		// for use in Pulumi programs
 		// e.g https://github.com/org/pulumi-provider-name/releases/
-		PluginDownloadURL: "github://api.github.com/port-labs/pulumi-port",
+		PluginDownloadURL: "github://api.github.com/port-labs/pulumi",
 		Description:       "A Pulumi package for creating and managing Port resources.",
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
@@ -78,7 +78,7 @@ func Provider() tfbridge.ProviderInfo {
 		Keywords:   []string{"pulumi", "port", "category/utility"},
 		License:    "Apache-2.0",
 		Homepage:   "https://www.pulumi.com",
-		Repository: "https://github.com/port-labs/pulumi-port-labs",
+		Repository: "https://github.com/port-labs/pulumi",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
 		GitHubOrg: "port-labs",
