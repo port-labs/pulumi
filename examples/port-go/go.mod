@@ -3,7 +3,7 @@ module port-go
 go 1.19
 
 require (
-	github.com/port-labs/pulumi-labs v0.8.3
+	github.com/port-labs/pulumi v0.0.24
 	github.com/pulumi/pulumi/sdk/v3 v3.60.0
 )
 
