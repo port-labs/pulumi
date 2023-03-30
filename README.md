@@ -14,13 +14,13 @@ This package is available for several languages/platforms:
 To use from JavaScript or TypeScript in Node.js, install using either `npm`:
 
 ```bash
-npm install @ediri/port
+npm install @port-labs/pulumi
 ```
 
 or `yarn`:
 
 ```bash
-yarn add @ediri/port
+yarn add @port-labs/pulumi
 ```
 
 ### Python
@@ -28,7 +28,7 @@ yarn add @ediri/port
 To use from Python, install using `pip`:
 
 ```bash
-pip install port_labs_port_pulumi
+pip install port_pulumi
 ```
 
 ### Go
@@ -37,14 +37,6 @@ To use from Go, use `go get` to grab the latest version of the library:
 
 ```bash
 go get github.com/port-labs/pulumi/sdk
-```
-
-### .NET
-
-To use from .NET, install using `dotnet add package`:
-
-```bash
-dotnet add package ediri.Port
 ```
 
 ## Configuration

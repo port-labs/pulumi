@@ -28,7 +28,7 @@ yarn add @ediri/port
 To use from Python, install using `pip`:
 
 ```bash
-pip install port_labs_port_pulumi
+pip install port_pulumi
 ```
 
 ### Go
