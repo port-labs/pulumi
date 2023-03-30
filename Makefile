@@ -3,9 +3,7 @@ PROJECT_NAME := Port Package
 SHELL            := /bin/bash
 PACK             := port
 ORG              := port-labs
-PROJECT          := github.com/${ORG}/pulumi-${PACK}
-NODE_MODULE_NAME := @pulumi/${PACK}
-TF_NAME          := ${PACK}
+PROJECT          := github.com/${ORG}/pulumi
 PROVIDER_PATH    := provider
 VERSION_PATH     := ${PROVIDER_PATH}/pkg/version.Version
 
