@@ -16,9 +16,10 @@ package port
 
 import (
 	"fmt"
+	"path/filepath"
+
 	"github.com/port-labs/pulumi-port/provider/pkg/version"
 	"github.com/port-labs/terraform-provider-port-labs/port"
-	"path/filepath"
 
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
@@ -113,10 +114,10 @@ func Provider() tfbridge.ProviderInfo {
 			// Map each resource in the Terraform provider to a Pulumi function. An example
 			// is below.
 			// "aws_ami": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getAmi")},
-		  
+
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
-			PackageName: "@port-labs/port-pulumi",
+			PackageName: "@port-labs/pulumi",
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",

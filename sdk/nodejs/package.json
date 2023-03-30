@@ -1,5 +1,5 @@
 {
-    "name": "@port-labs/port-pulumi",
+    "name": "@port-labs/pulumi",
     "version": "${VERSION}",
     "description": "A Pulumi package for creating and managing Port resources.",
     "keywords": [
