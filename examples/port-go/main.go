@@ -9,11 +9,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		entity, err := port.NewEntity(ctx, "entity", &port.EntityArgs{
 			Title:     pulumi.String("monolith"),
-			Blueprint: pulumi.String("microservice_blueprint"),
+			Blueprint: pulumi.String("microservice"),
 			Properties: port.EntityPropertyArray{
 				&port.EntityPropertyArgs{
-					Name:  pulumi.String("microservice_name"),
-					Value: pulumi.String("golang_monolith"),
+					Name:  pulumi.String("language"),
+					Value: pulumi.String("GO"),
 				},
 			},
 		})
