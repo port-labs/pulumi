@@ -51,7 +51,7 @@ export class Action extends pulumi.CustomResource {
      */
     public readonly identifier!: pulumi.Output<string>;
     /**
-     * The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+     * The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
      */
     public readonly invocationMethod!: pulumi.Output<outputs.ActionInvocationMethod>;
     /**
@@ -140,7 +140,7 @@ export interface ActionState {
      */
     identifier?: pulumi.Input<string>;
     /**
-     * The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+     * The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
      */
     invocationMethod?: pulumi.Input<inputs.ActionInvocationMethod>;
     /**
@@ -178,7 +178,7 @@ export interface ActionArgs {
      */
     identifier: pulumi.Input<string>;
     /**
-     * The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+     * The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
      */
     invocationMethod: pulumi.Input<inputs.ActionInvocationMethod>;
     /**

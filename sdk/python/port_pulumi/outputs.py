@@ -26,7 +26,9 @@ class ActionInvocationMethod(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
-        if key == "omitPayload":
+        if key == "azureOrg":
+            suggest = "azure_org"
+        elif key == "omitPayload":
             suggest = "omit_payload"
         elif key == "omitUserInputs":
             suggest = "omit_user_inputs"
@@ -47,16 +49,20 @@ class ActionInvocationMethod(dict):
     def __init__(__self__, *,
                  type: str,
                  agent: Optional[bool] = None,
+                 azure_org: Optional[str] = None,
                  omit_payload: Optional[bool] = None,
                  omit_user_inputs: Optional[bool] = None,
                  org: Optional[str] = None,
                  repo: Optional[str] = None,
                  report_workflow_status: Optional[bool] = None,
                  url: Optional[str] = None,
+                 webhook: Optional[str] = None,
                  workflow: Optional[str] = None):
         pulumi.set(__self__, "type", type)
         if agent is not None:
             pulumi.set(__self__, "agent", agent)
+        if azure_org is not None:
+            pulumi.set(__self__, "azure_org", azure_org)
         if omit_payload is not None:
             pulumi.set(__self__, "omit_payload", omit_payload)
         if omit_user_inputs is not None:
@@ -69,6 +75,8 @@ class ActionInvocationMethod(dict):
             pulumi.set(__self__, "report_workflow_status", report_workflow_status)
         if url is not None:
             pulumi.set(__self__, "url", url)
+        if webhook is not None:
+            pulumi.set(__self__, "webhook", webhook)
         if workflow is not None:
             pulumi.set(__self__, "workflow", workflow)
 
@@ -81,6 +89,11 @@ class ActionInvocationMethod(dict):
     @pulumi.getter
     def agent(self) -> Optional[bool]:
         return pulumi.get(self, "agent")
+
+    @property
+    @pulumi.getter(name="azureOrg")
+    def azure_org(self) -> Optional[str]:
+        return pulumi.get(self, "azure_org")
 
     @property
     @pulumi.getter(name="omitPayload")
@@ -111,6 +124,11 @@ class ActionInvocationMethod(dict):
     @pulumi.getter
     def url(self) -> Optional[str]:
         return pulumi.get(self, "url")
+
+    @property
+    @pulumi.getter
+    def webhook(self) -> Optional[str]:
+        return pulumi.get(self, "webhook")
 
     @property
     @pulumi.getter

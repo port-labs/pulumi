@@ -22,7 +22,7 @@ type Action struct {
 	Icon pulumi.StringPtrOutput `pulumi:"icon"`
 	// The identifier of the action
 	Identifier pulumi.StringOutput `pulumi:"identifier"`
-	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
 	InvocationMethod ActionInvocationMethodOutput `pulumi:"invocationMethod"`
 	// The display name of the action
 	Title pulumi.StringOutput `pulumi:"title"`
@@ -85,7 +85,7 @@ type actionState struct {
 	Icon *string `pulumi:"icon"`
 	// The identifier of the action
 	Identifier *string `pulumi:"identifier"`
-	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
 	InvocationMethod *ActionInvocationMethod `pulumi:"invocationMethod"`
 	// The display name of the action
 	Title *string `pulumi:"title"`
@@ -104,7 +104,7 @@ type ActionState struct {
 	Icon pulumi.StringPtrInput
 	// The identifier of the action
 	Identifier pulumi.StringPtrInput
-	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
 	InvocationMethod ActionInvocationMethodPtrInput
 	// The display name of the action
 	Title pulumi.StringPtrInput
@@ -127,7 +127,7 @@ type actionArgs struct {
 	Icon *string `pulumi:"icon"`
 	// The identifier of the action
 	Identifier string `pulumi:"identifier"`
-	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
 	InvocationMethod ActionInvocationMethod `pulumi:"invocationMethod"`
 	// The display name of the action
 	Title string `pulumi:"title"`
@@ -147,7 +147,7 @@ type ActionArgs struct {
 	Icon pulumi.StringPtrInput
 	// The identifier of the action
 	Identifier pulumi.StringInput
-	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+	// The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
 	InvocationMethod ActionInvocationMethodInput
 	// The display name of the action
 	Title pulumi.StringInput
@@ -264,7 +264,7 @@ func (o ActionOutput) Identifier() pulumi.StringOutput {
 	return o.ApplyT(func(v *Action) pulumi.StringOutput { return v.Identifier }).(pulumi.StringOutput)
 }
 
-// The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+// The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
 func (o ActionOutput) InvocationMethod() ActionInvocationMethodOutput {
 	return o.ApplyT(func(v *Action) ActionInvocationMethodOutput { return v.InvocationMethod }).(ActionInvocationMethodOutput)
 }

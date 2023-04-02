@@ -12,6 +12,7 @@ import (
 
 type ActionInvocationMethod struct {
 	Agent                *bool   `pulumi:"agent"`
+	AzureOrg             *string `pulumi:"azureOrg"`
 	OmitPayload          *bool   `pulumi:"omitPayload"`
 	OmitUserInputs       *bool   `pulumi:"omitUserInputs"`
 	Org                  *string `pulumi:"org"`
@@ -19,6 +20,7 @@ type ActionInvocationMethod struct {
 	ReportWorkflowStatus *bool   `pulumi:"reportWorkflowStatus"`
 	Type                 string  `pulumi:"type"`
 	Url                  *string `pulumi:"url"`
+	Webhook              *string `pulumi:"webhook"`
 	Workflow             *string `pulumi:"workflow"`
 }
 
@@ -35,6 +37,7 @@ type ActionInvocationMethodInput interface {
 
 type ActionInvocationMethodArgs struct {
 	Agent                pulumi.BoolPtrInput   `pulumi:"agent"`
+	AzureOrg             pulumi.StringPtrInput `pulumi:"azureOrg"`
 	OmitPayload          pulumi.BoolPtrInput   `pulumi:"omitPayload"`
 	OmitUserInputs       pulumi.BoolPtrInput   `pulumi:"omitUserInputs"`
 	Org                  pulumi.StringPtrInput `pulumi:"org"`
@@ -42,6 +45,7 @@ type ActionInvocationMethodArgs struct {
 	ReportWorkflowStatus pulumi.BoolPtrInput   `pulumi:"reportWorkflowStatus"`
 	Type                 pulumi.StringInput    `pulumi:"type"`
 	Url                  pulumi.StringPtrInput `pulumi:"url"`
+	Webhook              pulumi.StringPtrInput `pulumi:"webhook"`
 	Workflow             pulumi.StringPtrInput `pulumi:"workflow"`
 }
 
@@ -126,6 +130,10 @@ func (o ActionInvocationMethodOutput) Agent() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v ActionInvocationMethod) *bool { return v.Agent }).(pulumi.BoolPtrOutput)
 }
 
+func (o ActionInvocationMethodOutput) AzureOrg() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ActionInvocationMethod) *string { return v.AzureOrg }).(pulumi.StringPtrOutput)
+}
+
 func (o ActionInvocationMethodOutput) OmitPayload() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v ActionInvocationMethod) *bool { return v.OmitPayload }).(pulumi.BoolPtrOutput)
 }
@@ -152,6 +160,10 @@ func (o ActionInvocationMethodOutput) Type() pulumi.StringOutput {
 
 func (o ActionInvocationMethodOutput) Url() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ActionInvocationMethod) *string { return v.Url }).(pulumi.StringPtrOutput)
+}
+
+func (o ActionInvocationMethodOutput) Webhook() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ActionInvocationMethod) *string { return v.Webhook }).(pulumi.StringPtrOutput)
 }
 
 func (o ActionInvocationMethodOutput) Workflow() pulumi.StringPtrOutput {
@@ -189,6 +201,15 @@ func (o ActionInvocationMethodPtrOutput) Agent() pulumi.BoolPtrOutput {
 		}
 		return v.Agent
 	}).(pulumi.BoolPtrOutput)
+}
+
+func (o ActionInvocationMethodPtrOutput) AzureOrg() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ActionInvocationMethod) *string {
+		if v == nil {
+			return nil
+		}
+		return v.AzureOrg
+	}).(pulumi.StringPtrOutput)
 }
 
 func (o ActionInvocationMethodPtrOutput) OmitPayload() pulumi.BoolPtrOutput {
@@ -251,6 +272,15 @@ func (o ActionInvocationMethodPtrOutput) Url() pulumi.StringPtrOutput {
 			return nil
 		}
 		return v.Url
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o ActionInvocationMethodPtrOutput) Webhook() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ActionInvocationMethod) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Webhook
 	}).(pulumi.StringPtrOutput)
 }
 

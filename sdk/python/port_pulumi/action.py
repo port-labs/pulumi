@@ -28,7 +28,7 @@ class ActionArgs:
         The set of arguments for constructing a Action resource.
         :param pulumi.Input[str] blueprint_identifier: The identifier of the blueprint
         :param pulumi.Input[str] identifier: The identifier of the action
-        :param pulumi.Input['ActionInvocationMethodArgs'] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+        :param pulumi.Input['ActionInvocationMethodArgs'] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
         :param pulumi.Input[str] title: The display name of the action
         :param pulumi.Input[str] trigger: The type of the action, one of CREATE, DAY-2, DELETE
         :param pulumi.Input[str] description: The description of the action
@@ -75,7 +75,7 @@ class ActionArgs:
     @pulumi.getter(name="invocationMethod")
     def invocation_method(self) -> pulumi.Input['ActionInvocationMethodArgs']:
         """
-        The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+        The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
         """
         return pulumi.get(self, "invocation_method")
 
@@ -161,7 +161,7 @@ class _ActionState:
         :param pulumi.Input[str] description: The description of the action
         :param pulumi.Input[str] icon: The icon of the action
         :param pulumi.Input[str] identifier: The identifier of the action
-        :param pulumi.Input['ActionInvocationMethodArgs'] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+        :param pulumi.Input['ActionInvocationMethodArgs'] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
         :param pulumi.Input[str] title: The display name of the action
         :param pulumi.Input[str] trigger: The type of the action, one of CREATE, DAY-2, DELETE
         :param pulumi.Input[Sequence[pulumi.Input['ActionUserPropertyArgs']]] user_properties: The input properties of the action
@@ -235,7 +235,7 @@ class _ActionState:
     @pulumi.getter(name="invocationMethod")
     def invocation_method(self) -> Optional[pulumi.Input['ActionInvocationMethodArgs']]:
         """
-        The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+        The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
         """
         return pulumi.get(self, "invocation_method")
 
@@ -302,7 +302,7 @@ class Action(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the action
         :param pulumi.Input[str] icon: The icon of the action
         :param pulumi.Input[str] identifier: The identifier of the action
-        :param pulumi.Input[pulumi.InputType['ActionInvocationMethodArgs']] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+        :param pulumi.Input[pulumi.InputType['ActionInvocationMethodArgs']] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
         :param pulumi.Input[str] title: The display name of the action
         :param pulumi.Input[str] trigger: The type of the action, one of CREATE, DAY-2, DELETE
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActionUserPropertyArgs']]]] user_properties: The input properties of the action
@@ -394,7 +394,7 @@ class Action(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the action
         :param pulumi.Input[str] icon: The icon of the action
         :param pulumi.Input[str] identifier: The identifier of the action
-        :param pulumi.Input[pulumi.InputType['ActionInvocationMethodArgs']] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+        :param pulumi.Input[pulumi.InputType['ActionInvocationMethodArgs']] invocation_method: The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
         :param pulumi.Input[str] title: The display name of the action
         :param pulumi.Input[str] trigger: The type of the action, one of CREATE, DAY-2, DELETE
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActionUserPropertyArgs']]]] user_properties: The input properties of the action
@@ -449,7 +449,7 @@ class Action(pulumi.CustomResource):
     @pulumi.getter(name="invocationMethod")
     def invocation_method(self) -> pulumi.Output['outputs.ActionInvocationMethod']:
         """
-        The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB
+        The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS
         """
         return pulumi.get(self, "invocation_method")
 

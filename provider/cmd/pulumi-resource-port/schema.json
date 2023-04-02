@@ -88,6 +88,14 @@
                         }
                     }
                 },
+                "azureOrg": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
                 "omitPayload": {
                     "type": "boolean",
                     "language": {
@@ -137,6 +145,14 @@
                     }
                 },
                 "url": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "webhook": {
                     "type": "string",
                     "language": {
                         "python": {
@@ -702,7 +718,7 @@
                 },
                 "invocationMethod": {
                     "$ref": "#/types/port:index/ActionInvocationMethod:ActionInvocationMethod",
-                    "description": "The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB\n"
+                    "description": "The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS\n"
                 },
                 "title": {
                     "type": "string",
@@ -746,7 +762,7 @@
                 },
                 "invocationMethod": {
                     "$ref": "#/types/port:index/ActionInvocationMethod:ActionInvocationMethod",
-                    "description": "The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB\n"
+                    "description": "The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS\n"
                 },
                 "title": {
                     "type": "string",
@@ -792,7 +808,7 @@
                     },
                     "invocationMethod": {
                         "$ref": "#/types/port:index/ActionInvocationMethod:ActionInvocationMethod",
-                        "description": "The methods the action is dispatched in. Supports WEBHOOK, KAFKA and GITHUB\n"
+                        "description": "The methods the action is dispatched in. Supports WEBHOOK, KAFKA, GITHUB and AZURE-DEVOPS\n"
                     },
                     "title": {
                         "type": "string",

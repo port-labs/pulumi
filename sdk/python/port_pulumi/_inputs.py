@@ -26,16 +26,20 @@ class ActionInvocationMethodArgs:
     def __init__(__self__, *,
                  type: pulumi.Input[str],
                  agent: Optional[pulumi.Input[bool]] = None,
+                 azure_org: Optional[pulumi.Input[str]] = None,
                  omit_payload: Optional[pulumi.Input[bool]] = None,
                  omit_user_inputs: Optional[pulumi.Input[bool]] = None,
                  org: Optional[pulumi.Input[str]] = None,
                  repo: Optional[pulumi.Input[str]] = None,
                  report_workflow_status: Optional[pulumi.Input[bool]] = None,
                  url: Optional[pulumi.Input[str]] = None,
+                 webhook: Optional[pulumi.Input[str]] = None,
                  workflow: Optional[pulumi.Input[str]] = None):
         pulumi.set(__self__, "type", type)
         if agent is not None:
             pulumi.set(__self__, "agent", agent)
+        if azure_org is not None:
+            pulumi.set(__self__, "azure_org", azure_org)
         if omit_payload is not None:
             pulumi.set(__self__, "omit_payload", omit_payload)
         if omit_user_inputs is not None:
@@ -48,6 +52,8 @@ class ActionInvocationMethodArgs:
             pulumi.set(__self__, "report_workflow_status", report_workflow_status)
         if url is not None:
             pulumi.set(__self__, "url", url)
+        if webhook is not None:
+            pulumi.set(__self__, "webhook", webhook)
         if workflow is not None:
             pulumi.set(__self__, "workflow", workflow)
 
@@ -68,6 +74,15 @@ class ActionInvocationMethodArgs:
     @agent.setter
     def agent(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "agent", value)
+
+    @property
+    @pulumi.getter(name="azureOrg")
+    def azure_org(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "azure_org")
+
+    @azure_org.setter
+    def azure_org(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "azure_org", value)
 
     @property
     @pulumi.getter(name="omitPayload")
@@ -122,6 +137,15 @@ class ActionInvocationMethodArgs:
     @url.setter
     def url(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "url", value)
+
+    @property
+    @pulumi.getter
+    def webhook(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "webhook")
+
+    @webhook.setter
+    def webhook(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "webhook", value)
 
     @property
     @pulumi.getter

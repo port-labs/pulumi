@@ -7,6 +7,7 @@ import * as outputs from "../types/output";
 
 export interface ActionInvocationMethod {
     agent?: pulumi.Input<boolean>;
+    azureOrg?: pulumi.Input<string>;
     omitPayload?: pulumi.Input<boolean>;
     omitUserInputs?: pulumi.Input<boolean>;
     org?: pulumi.Input<string>;
@@ -14,6 +15,7 @@ export interface ActionInvocationMethod {
     reportWorkflowStatus?: pulumi.Input<boolean>;
     type: pulumi.Input<string>;
     url?: pulumi.Input<string>;
+    webhook?: pulumi.Input<string>;
     workflow?: pulumi.Input<string>;
 }
 

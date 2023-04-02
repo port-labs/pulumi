@@ -7,6 +7,7 @@ import * as outputs from "../types/output";
 
 export interface ActionInvocationMethod {
     agent?: boolean;
+    azureOrg?: string;
     omitPayload?: boolean;
     omitUserInputs?: boolean;
     org?: string;
@@ -14,6 +15,7 @@ export interface ActionInvocationMethod {
     reportWorkflowStatus?: boolean;
     type: string;
     url?: string;
+    webhook?: string;
     workflow?: string;
 }
 
