@@ -396,6 +396,7 @@ class BlueprintProperty(dict):
                  enums: Optional[Sequence[str]] = None,
                  format: Optional[str] = None,
                  icon: Optional[str] = None,
+                 items: Optional[Mapping[str, Any]] = None,
                  required: Optional[bool] = None,
                  spec: Optional[str] = None):
         pulumi.set(__self__, "identifier", identifier)
@@ -415,6 +416,8 @@ class BlueprintProperty(dict):
             pulumi.set(__self__, "format", format)
         if icon is not None:
             pulumi.set(__self__, "icon", icon)
+        if items is not None:
+            pulumi.set(__self__, "items", items)
         if required is not None:
             pulumi.set(__self__, "required", required)
         if spec is not None:
@@ -469,6 +472,11 @@ class BlueprintProperty(dict):
     @pulumi.getter
     def icon(self) -> Optional[str]:
         return pulumi.get(self, "icon")
+
+    @property
+    @pulumi.getter
+    def items(self) -> Optional[Mapping[str, Any]]:
+        return pulumi.get(self, "items")
 
     @property
     @pulumi.getter
