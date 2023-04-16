@@ -844,18 +844,19 @@ func (o BlueprintMirrorPropertyArrayOutput) Index(i pulumi.IntInput) BlueprintMi
 }
 
 type BlueprintProperty struct {
-	Default      *string           `pulumi:"default"`
-	DefaultItems []string          `pulumi:"defaultItems"`
-	Description  *string           `pulumi:"description"`
-	EnumColors   map[string]string `pulumi:"enumColors"`
-	Enums        []string          `pulumi:"enums"`
-	Format       *string           `pulumi:"format"`
-	Icon         *string           `pulumi:"icon"`
-	Identifier   string            `pulumi:"identifier"`
-	Required     *bool             `pulumi:"required"`
-	Spec         *string           `pulumi:"spec"`
-	Title        string            `pulumi:"title"`
-	Type         string            `pulumi:"type"`
+	Default      *string                `pulumi:"default"`
+	DefaultItems []string               `pulumi:"defaultItems"`
+	Description  *string                `pulumi:"description"`
+	EnumColors   map[string]string      `pulumi:"enumColors"`
+	Enums        []string               `pulumi:"enums"`
+	Format       *string                `pulumi:"format"`
+	Icon         *string                `pulumi:"icon"`
+	Identifier   string                 `pulumi:"identifier"`
+	Items        map[string]interface{} `pulumi:"items"`
+	Required     *bool                  `pulumi:"required"`
+	Spec         *string                `pulumi:"spec"`
+	Title        string                 `pulumi:"title"`
+	Type         string                 `pulumi:"type"`
 }
 
 // BlueprintPropertyInput is an input type that accepts BlueprintPropertyArgs and BlueprintPropertyOutput values.
@@ -878,6 +879,7 @@ type BlueprintPropertyArgs struct {
 	Format       pulumi.StringPtrInput   `pulumi:"format"`
 	Icon         pulumi.StringPtrInput   `pulumi:"icon"`
 	Identifier   pulumi.StringInput      `pulumi:"identifier"`
+	Items        pulumi.MapInput         `pulumi:"items"`
 	Required     pulumi.BoolPtrInput     `pulumi:"required"`
 	Spec         pulumi.StringPtrInput   `pulumi:"spec"`
 	Title        pulumi.StringInput      `pulumi:"title"`
@@ -965,6 +967,10 @@ func (o BlueprintPropertyOutput) Icon() pulumi.StringPtrOutput {
 
 func (o BlueprintPropertyOutput) Identifier() pulumi.StringOutput {
 	return o.ApplyT(func(v BlueprintProperty) string { return v.Identifier }).(pulumi.StringOutput)
+}
+
+func (o BlueprintPropertyOutput) Items() pulumi.MapOutput {
+	return o.ApplyT(func(v BlueprintProperty) map[string]interface{} { return v.Items }).(pulumi.MapOutput)
 }
 
 func (o BlueprintPropertyOutput) Required() pulumi.BoolPtrOutput {

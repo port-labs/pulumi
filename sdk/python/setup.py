@@ -38,6 +38,7 @@ def readme():
 
 
 setup(name='port_pulumi',
+      python_requires='>=3.7',
       version=VERSION,
       description="A Pulumi package for creating and managing Port resources.",
       long_description=readme(),

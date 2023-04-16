@@ -481,6 +481,7 @@ class BlueprintPropertyArgs:
                  enums: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  format: Optional[pulumi.Input[str]] = None,
                  icon: Optional[pulumi.Input[str]] = None,
+                 items: Optional[pulumi.Input[Mapping[str, Any]]] = None,
                  required: Optional[pulumi.Input[bool]] = None,
                  spec: Optional[pulumi.Input[str]] = None):
         pulumi.set(__self__, "identifier", identifier)
@@ -500,6 +501,8 @@ class BlueprintPropertyArgs:
             pulumi.set(__self__, "format", format)
         if icon is not None:
             pulumi.set(__self__, "icon", icon)
+        if items is not None:
+            pulumi.set(__self__, "items", items)
         if required is not None:
             pulumi.set(__self__, "required", required)
         if spec is not None:
@@ -594,6 +597,15 @@ class BlueprintPropertyArgs:
     @icon.setter
     def icon(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "icon", value)
+
+    @property
+    @pulumi.getter
+    def items(self) -> Optional[pulumi.Input[Mapping[str, Any]]]:
+        return pulumi.get(self, "items")
+
+    @items.setter
+    def items(self, value: Optional[pulumi.Input[Mapping[str, Any]]]):
+        pulumi.set(self, "items", value)
 
     @property
     @pulumi.getter

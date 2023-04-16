@@ -65,6 +65,7 @@ export interface BlueprintProperty {
     format?: pulumi.Input<string>;
     icon?: pulumi.Input<string>;
     identifier: pulumi.Input<string>;
+    items?: pulumi.Input<{[key: string]: any}>;
     required?: pulumi.Input<boolean>;
     spec?: pulumi.Input<string>;
     title: pulumi.Input<string>;
