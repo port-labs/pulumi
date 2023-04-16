@@ -81,92 +81,37 @@
         "port:index/ActionInvocationMethod:ActionInvocationMethod": {
             "properties": {
                 "agent": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "azureOrg": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "omitPayload": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "omitUserInputs": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "org": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "repo": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "reportWorkflowStatus": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "type": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "url": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "webhook": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "workflow": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -177,98 +122,43 @@
         "port:index/ActionUserProperty:ActionUserProperty": {
             "properties": {
                 "blueprint": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "default": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "defaultItems": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
                     }
                 },
                 "description": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "enums": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
                     }
                 },
                 "format": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "identifier": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "pattern": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "required": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "title": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "type": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -281,79 +171,34 @@
         "port:index/BlueprintCalculationProperty:BlueprintCalculationProperty": {
             "properties": {
                 "calculation": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "colorized": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "colors": {
                     "type": "object",
                     "additionalProperties": {
                         "type": "string"
-                    },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
                     }
                 },
                 "description": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "format": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "icon": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "identifier": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "title": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "type": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -366,20 +211,10 @@
         "port:index/BlueprintChangelogDestination:BlueprintChangelogDestination": {
             "properties": {
                 "type": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "url": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -390,28 +225,13 @@
         "port:index/BlueprintMirrorProperty:BlueprintMirrorProperty": {
             "properties": {
                 "identifier": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "path": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "title": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -423,109 +243,55 @@
         "port:index/BlueprintProperty:BlueprintProperty": {
             "properties": {
                 "default": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "defaultItems": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
                     }
                 },
                 "description": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "enumColors": {
                     "type": "object",
                     "additionalProperties": {
                         "type": "string"
-                    },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
                     }
                 },
                 "enums": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
                     }
                 },
                 "format": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "icon": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "identifier": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
+                    "type": "string"
+                },
+                "items": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
                     }
                 },
                 "required": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "spec": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "title": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "type": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -538,44 +304,19 @@
         "port:index/BlueprintRelation:BlueprintRelation": {
             "properties": {
                 "identifier": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "many": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "required": {
-                    "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "boolean"
                 },
                 "target": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "title": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -590,37 +331,17 @@
                     "type": "array",
                     "items": {
                         "type": "string"
-                    },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
                     }
                 },
                 "name": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "type": {
                     "type": "string",
-                    "deprecationMessage": "property type is not required anymore",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "deprecationMessage": "property type is not required anymore"
                 },
                 "value": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -631,20 +352,10 @@
         "port:index/EntityRelation:EntityRelation": {
             "properties": {
                 "identifier": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 },
                 "name": {
-                    "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "type": "string"
                 }
             },
             "type": "object",
@@ -836,7 +547,7 @@
                     "items": {
                         "$ref": "#/types/port:index/BlueprintCalculationProperty:BlueprintCalculationProperty"
                     },
-                    "description": "A set of properties that are calculated upon Entitys regular properties.\n"
+                    "description": "A set of properties that are calculated upon entity's regular properties.\n"
                 },
                 "changelogDestination": {
                     "$ref": "#/types/port:index/BlueprintChangelogDestination:BlueprintChangelogDestination",
@@ -912,7 +623,7 @@
                     "items": {
                         "$ref": "#/types/port:index/BlueprintCalculationProperty:BlueprintCalculationProperty"
                     },
-                    "description": "A set of properties that are calculated upon Entitys regular properties.\n"
+                    "description": "A set of properties that are calculated upon entity's regular properties.\n"
                 },
                 "changelogDestination": {
                     "$ref": "#/types/port:index/BlueprintChangelogDestination:BlueprintChangelogDestination",
@@ -974,7 +685,7 @@
                         "items": {
                             "$ref": "#/types/port:index/BlueprintCalculationProperty:BlueprintCalculationProperty"
                         },
-                        "description": "A set of properties that are calculated upon Entitys regular properties.\n"
+                        "description": "A set of properties that are calculated upon entity's regular properties.\n"
                     },
                     "changelogDestination": {
                         "$ref": "#/types/port:index/BlueprintChangelogDestination:BlueprintChangelogDestination",

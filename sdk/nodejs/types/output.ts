@@ -65,6 +65,7 @@ export interface BlueprintProperty {
     format?: string;
     icon?: string;
     identifier: string;
+    items?: {[key: string]: any};
     required?: boolean;
     spec?: string;
     title: string;
