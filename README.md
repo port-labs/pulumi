@@ -1,3 +1,5 @@
+> 🚨 **_NOTE:_**  This repository is archived and moved to https://github.com/port-labs/pulumi-port 🚨
+
 # Port Resource Provider
 
 ![Port](./img/port.svg)
